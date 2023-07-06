@@ -1,0 +1,32 @@
+Name: Khoa Nguyen
+NetID: knguy42
+Last date of modification: 04/04/2023
+Hour spent on the project: approximately 65-80 hours
+
+Breakdown of the code:
+A. Control panel
+1. Circle/Square button:
+    - store isCircle state of shape for each object in an array
+    - these buttons set isCircle to be true/false
+2. RGB slider
+    - JSlider: rSlider, gSlider, bSlider for colors
+    - add MajorTickSpacing and label
+3. Palette button
+    - undone. There is a tutorial online on how to use BufferedImage, however I cannot assess the rgb values defied in Canvas(), so this makes no change
+4. Clear button
+    - undone. There is tutorial and I am supposed to remove theCanvas from something but not itself, but I cannot figure out yet.
+
+B. Paint panel
+1. Drawing objects (square/circle): 
+    - Formula to draw each object according to isCircle
+2. Dragging:
+    - int drag allow to repaint() shapes by setting the location X(), Y() to 'drag'
+    - the same method should be applied to changing color of exisiting objects. the challenge is there are 3 values creaing variable colors used for each objects
+3. Highlight
+    - Here I finally figured out a way to do highlight using int drag. basically if it exists a shape already if(drag == i), the program will first draw a yellow shape of bigger size. This will be done before actually drawing the required shape, and once mouseclick is on some other places, the yellow shape (highlight) disappear, as it checkexists is no longer existing.
+4. Changing color of existing shapes:
+    - turns out setColor(colors[i]) does work, i just forgot to save and rerun the program. basically the current color before it starts to draw the shape is yellow if the shape does exist; since there is setColor(colors[i]) it starts to repaint once the slides are changed.
+
+CHALLENGES
+1. Thinking of a way to assess exisiting objects. After a lot of consultation I finally came up with int drag, but it took too much time.
+2. Everything is equally difficult. It might be just a matter of what tutorial I stumbled on online and how many days I have with each one.
